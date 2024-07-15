@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <div class="app">
+        <h1>My library</h1>
+
+        <div class = "block">
+            <h2> Add Book </h2>
+            <form id="addBook">
+                <input type="text" id="Btitle" placeholder="Book Title" required>
+                <input type="text" id="Aname" placeholder="Book Author" required>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+
+        <div class="block">
+            <h2> Edit Book </h2>
+            <form id= "editBook" style ="display: none;">
+                <input type="text" id="editBtitle" placeholder="Book Title" required>
+                <input type="text" id="editAname" placeholder="Book Author" required>
+                <button type="submit"> Update info </button>
+            </form>
+        </div>
+
+        <div class="block">
+            <h2>Filters</h2>
+            <input type="text" id="searchbyTitle" placeholder="Search by Title">
+            <input type="text" id="searchbyAuthor" placeholder="Search by Author">
+        </div>
+
+        <div class="list">
+            <h2>My books</h2>
+            <ul id="bookList"></ul>
+        </div>
+
+        <button id="exporting"> Export list </button>
+    
+    </div>
+     
+    <script src="script.js"></script>
+     
+</body>
+</html>

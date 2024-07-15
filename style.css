@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+    margin: 0;
+    padding: 20;
+
+}
+
+.app{
+    max-width: 800px;
+    margin:0 auto;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+}
+
+h1{
+    color: black;
+}
+
+h2{
+    color: black;
+}
+
+.block{
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid rgba(184, 180, 180, 0.726);
+    border-radius: 5px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(1, 58, 1);
+}
+
+.list{
+    margin-top: 25px;
+}
+
+ul {
+    list-style-type: none ;
+    padding: 0;
+
+}
+
+li{
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+li span{
+    flex-grow: 1;
+    margin-right: 10px;
+
+
+}
+
+li button {
+    background-color: red;
+}
+
+li button:hover{
+    background-color: rgb(112, 3, 3);
+}
