@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded',()=> {
 const addBook = document.getElementById('addBook');
 const editBook = document.getElementById('editBook');
 const bookList = document.getElementById('bookList');
@@ -8,9 +7,7 @@ const exporting = document.getElementById('exporting');
 
 
 let books = JSON.parse(localStorage.getItem('books')) || [];
-
 let curentEditIndex = null;
-
 
 
 const listUpdater = (filter = {}) => {
@@ -37,14 +34,12 @@ const addB =(title, author) =>{
 };
 
 
-
 const updateB = (index,title,author) =>{
     books[index] = { title, author};
     localStorage.setItem('books', JSON.stringify(books));
     listUpdater();
 };
 
-window.updateB = updateB;
 
 const editB =(index) => {
     curentEditIndex = index;
@@ -55,15 +50,12 @@ const editB =(index) => {
     
 };
 
-window.editB = editB;
 
 const dellete =(index) => {
     books.splice(index,1);
     localStorage.setItem('books', JSON.stringify(books));
     listUpdater();
 };
-
-window.dellete= dellete;
 
 
 addBook.addEventListener('submit', (e) => {
@@ -74,7 +66,6 @@ addBook.addEventListener('submit', (e) => {
     addBook.reset();
 
 });
-
 
 
 editBook.addEventListener('submit', (e) =>
@@ -90,9 +81,11 @@ searchbyTitle.addEventListener('input',() =>{
     listUpdater({title: searchbyTitle.value, author: searchbyAuthor.value});
 });
 
+
 searchbyAuthor.addEventListener('input',() =>{
     listUpdater({title: searchbyTitle.value, author: searchbyAuthor.value});
 });
+
 
 exporting.addEventListener('click', () =>{
     const dataB = "data:text/json;charset=utf-8,"+ encodeURIComponent(JSON.stringify(books));
@@ -104,4 +97,3 @@ exporting.addEventListener('click', () =>{
 })
 
 listUpdater();
-});
