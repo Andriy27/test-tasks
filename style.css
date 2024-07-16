@@ -3,6 +3,7 @@ body {
     background-color: bisque;
     margin: 0;
     padding: 20;
+    color: rgb(64, 63, 63)
 
 }
 
@@ -10,41 +11,75 @@ body {
     max-width: 800px;
     margin:0 auto;
     background: whitesmoke;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px gray;
+    border : 1px solid #e2dede;
+    box-shadow : 0 0 10px gray;
+    
 }
 
 h1{
-    color: black;
+    color: rgb(28, 28, 28);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2{
-    color: black;
+    color: rgb(28, 28, 28);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .block{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 input {
     width: calc(100% - 20px);
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     border: 1px solid rgba(184, 180, 180, 0.726);
     border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #afafaf;
+}
+
+#input::placeholder{
+    color: #bbb;
 }
 
 button{
     padding: 10px 20px;
-    background-color: green;
+    background-color: rgb(118, 136, 135);
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover{
-    background-color: rgb(1, 58, 1);
+    background-color: rgb(61, 80, 86);
+}
+
+button[type="button"] {
+    background-color: rgb(225, 52, 52);
+}
+
+button[type="button"]:hover {
+    background-color: rgb(172, 38, 38);
+}
+
+
+#editBook{
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px black;
+    margin-bottom: 30px;
+
 }
 
 .list{
@@ -66,20 +101,41 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background 0.3s ease;
 
+}
+
+li:hover{
+    background-color: #afafaf;;
 }
 
 li span{
     flex-grow: 1;
     margin-right: 10px;
+    font-size: 16px;
+    color: #555
 
 
 }
 
 li button {
-    background-color: red;
+    background-color: #6c757d;
+    margin-left: 10px;
 }
 
 li button:hover{
-    background-color: rgb(112, 3, 3);
+    background-color: #5a6268;
+}
+
+
+#exporting{
+    display: block;
+    margin: 20px auto;
+    width: calc(100%-40px);
+    text-align: center;
+    background-color: green;
+}
+
+#exportint:hover{
+    background-color: rgb(1, 86, 1);
 }
